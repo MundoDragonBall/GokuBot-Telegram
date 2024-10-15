@@ -91,13 +91,13 @@ const iniciarBot = async () => {
     // Mostrar los mensajes una vez que el token es válido
     console.log(chalk.blue('Iniciando✨...'));
     console.log(gradient.pastel.multiline(figlet.textSync('Alfa TG', { horizontalLayout: 'default' })));
-    console.log(chalk.green('CREADOR EliasarYT: puro nica papa'));
+    console.log(chalk.green('CREADOR Juan1986'));
 
     const bot = new Telegraf(token);
 
     // Comando /start
     bot.start((ctx) => {
-        ctx.reply('¡Hola! Soy tu bot de Telegram, listo para ayudarte.');
+        ctx.reply('¡Hola! Soy GokuBot, tu bot de Telegram, listo para ayudarte.');
     });
 
 bot.command('messi', async (ctx) => {
@@ -234,10 +234,25 @@ bot.on('new_chat_members', async (ctx) => {
       // Verifica si el usuario tiene fotos de perfil
       if (profilePics.total_count > 0) {
         const fileId = profilePics.photos[0][0].file_id; // Obtener la primera foto de perfil
-        await ctx.replyWithPhoto(fileId, { caption: `🎉 ¡Bienvenido/a, ${member.first_name}!` });
+        await ctx.replyWithPhoto(fileId, { caption: `🎉 ¡Hola soy un bot llamado GokuBot, Bienvenido/a, ${member.first_name} siéntete libre de hablar pero antes lee las normas!` });
       } else {
         // Si el usuario no tiene fotos de perfil
-        await ctx.reply(`🎉 ¡Bienvenido/a, ${member.first_name}!`);
+        await ctx.reply(`
+╔═════════════
+║ Hola soy GokuBot un
+║ robot que da la
+║ bienvenida a los
+║ nuevos usuarios.
+║ Bienvenido/a ${member.first_name}
+║ saiyan
+║ al grupo
+║ siéntete libre de hablar
+║ y subir videos e
+║ imágenes....
+║
+╚══════════════
+
+!`);
       }
     } catch (error) {
       console.log('Error al obtener la foto de perfil:', error);
@@ -356,15 +371,17 @@ bot.command('kick', async (ctx) => {
   }
 });
 
-const menuImageUrl = 'https://i.ibb.co/rF6Fm7S/5fd6107ef62a08c959702bf11f4fc3ce.jpg'; // URL de la imagen del menú
+const menuImageUrl = 'https://i.postimg.cc/bwTH9969/Goku-Bot-telegram.jpg'; // URL de la imagen del menú
 
 bot.command('menu', async (ctx) => {
   const menuText = `
-ALFA TG
+GokuBot
 
 Comandos Generales:
 - /start
 - /creador
+- /whatsApp 
+- /telegram 
 - /clima [ciudad]
 
 Descargadores:
@@ -405,7 +422,151 @@ Interacción:
   }
 });
 
+bot.command('whatsApp', async (ctx) => {
+  const mensajewhatsapp = `
+Te gusta dragón ball aqui tenéis una comunidad echa por un fan para todos los fans.
+Tenéis aqui los enlaces de la comunidad frikilandia de WhatsApp, si queréis ver los grupos de Facebook y Telegram pon:
 
+gruposfrikis
+Facebook
+Telegram
+
+◜🐉 GRUPOS OFICIALES 🐉◞
+
+🌍📱🎮🐉 𝔻𝕣𝕒𝕘𝕠𝕟 𝔹𝕒𝕝𝕝 𝕃𝕖𝕘𝕖𝕟𝕕𝕤 🐉 🎮📱🌍
+https://chat.whatsapp.com/L2vpoClRqYC6wsmGC0gFqS
+
+🌍🐉👨‍👩‍👧‍👧 𝔽𝕒𝕞𝕚𝕝𝕚𝕒 𝕊𝕒𝕚𝕪𝕒𝕟 👨‍👩‍👧‍👧🐉🌍
+https://chat.whatsapp.com/LmDvJZWd0eQCzhR8lwJ5B4
+
+🐉 𝔻𝕣𝕒𝕘𝕠𝕟 𝔹𝕒𝕝𝕝 𝔽𝕠𝕣𝕥𝕟𝕚𝕥𝕖 🐉
+https://chat.whatsapp.com/KJcE87Yb8ZP7WDiww8UDkY
+
+🌍🐉🐲 𝔻𝕣𝕒𝕘𝕠𝕟 𝔹𝕒𝕝𝕝 ℝ𝕠𝕝 🐲🐉🌍
+https://chat.whatsapp.com/JXVf0iaQhuvE7uQCE8QSym
+
+🌍🎮🐉 𝔻𝕣𝕒𝕘𝕠𝕟 𝔹𝕒𝕝𝕝 𝕤𝕡𝕒𝕣𝕜𝕚𝕟𝕘 𝕫𝕖𝕣𝕠 🐉🎮🌍
+https://chat.whatsapp.com/EJFl28xgwLeEhIQxriWiuZ
+
+🌍🐉🦹‍♂️ 𝕍𝕚𝕝𝕝𝕒𝕟𝕠𝕤 𝕕𝕖 𝔻𝕣𝕒𝕘𝕠𝕟 𝔹𝕒𝕝𝕝 🐉🦹‍♂️🌍
+https://chat.whatsapp.com/LCF5v7bb9dN8lGOrY9OlFR
+
+🐉 𝔻𝕣𝕒𝕘𝕠𝕟 𝔹𝕒𝕝𝕝 𝕏𝕖𝕟𝕠𝕧𝕖𝕣𝕤𝕖 🐉
+https://chat.whatsapp.com/Hq0VCaXqGaU40P89HmPuni
+
+🌍🐉📹 𝕍𝕚𝕕𝕖𝕠𝕤 𝔻𝕣𝕒𝕘𝕠𝕟 𝔹𝕒𝕝𝕝 📹🐉🌍
+https://chat.whatsapp.com/EaTmnGSAX3pH06Dl7MRzmV
+
+🌍🐲🐉𝔻𝕣𝕒𝕘𝕠𝕟 𝔹𝕒𝕝𝕝 𝕊𝕥𝕚𝕔𝕜𝕖𝕣𝕤🐉🐲🌍
+https://chat.whatsapp.com/K1FSWdgwuzTL1z08NVYJNw
+
+🌍🐉🎨 𝔻𝕣𝕒𝕘𝕠𝕟 𝔹𝕒𝕝𝕝 𝕕𝕚𝕓𝕦𝕛𝕠𝕤 🎨🐉🌍
+https://chat.whatsapp.com/LddDN9xDXcg15IuOirylqZ
+
+🌍🐉 ℙ𝕠𝕨𝕖𝕣 𝕆𝕗 𝔾𝕠𝕕𝕤 🐉🌍
+https://chat.whatsapp.com/ELy0mvOw5JyLnHmwFY7j1K
+
+🌍📊🐉 𝔻𝕣𝕒𝕘𝕠𝕟 𝔹𝕒𝕝𝕝 𝕖𝕟𝕔𝕦𝕖𝕤𝕥𝕒𝕤 🐉📊🌍
+https://chat.whatsapp.com/GX6QQjlGEcYAGz823ZUpfI
+
+🌍🎮🐉 𝔻𝕣𝕒𝕘𝕠𝕟 𝕓𝕒𝕝𝕝 𝕜𝕒𝕜𝕒𝕣𝕠𝕥 🐉🎮🌍
+https://chat.whatsapp.com/JbIgLHQuvue7hItxhng9nN
+
+🌍🎮🐉 𝔻𝕣𝕒𝕘𝕠𝕟 𝔹𝕒𝕝𝕝 ℤ 𝔻𝕠𝕜𝕜𝕒𝕟 𝕓𝕒𝕥𝕥𝕝𝕖 🐉🎮🌍
+https://chat.whatsapp.com/GEj9B5TlTvoIC6wBLJ71UU
+
+🐲🅳𝗥𝗔𝗚𝗢𝗡 🅱𝗔𝗟𝗟𝗦 🆉🐲🔥 🅵𝗔𝗡𝗦 🎥
+https://chat.whatsapp.com/KljiSB549Xc7HXXIzVPFat
+
+🌍🐉🐲 𝔽𝕒𝕟𝕤 𝔻𝕖 𝔻𝕣𝕒𝕘𝕠𝕟 𝔹𝕒𝕝𝕝 ℤ 𝕂𝕒𝕚 🐲🐉🌍
+https://chat.whatsapp.com/BhXwjZVP0Ae9VU4pHqXATS
+
+🐉🎮𝔻ℝ𝔸𝔾𝕆ℕ 𝔹𝔸𝕃𝕃 𝔽𝕀𝔾𝕋ℍ𝔼ℝℤ🎮🐉
+https://chat.whatsapp.com/LUKhODoKfqrC0uVKqMdfu4
+
+◆━━━━━━━▣✦▣━━━━━━━━◆
+
+◜💦 CANALES OFICIALES 💦◞ 
+
+🌍🐉🐲 Noticias dragón ball 🐲🐉🌍
+https://whatsapp.com/channel/0029VaSZsS14Y9lhQYCFvO0w 
+
+🌍🐉🐲 Curiosidad dragón ball 🐲🐉🌍
+https://whatsapp.com/channel/0029VaQghZyAInPcWuTHOR3V 
+
+🌍🐉🐲 Dragón ball juegos 🐲🐉🌍
+https://whatsapp.com/channel/0029VaQkf7T0rGiORXhKqR0R
+  `;  
+    
+await ctx.reply(mensajewhatsapp);
+}); 
+    
+
+bot.command('rules', async (ctx) => {
+  const mensajerules = `
+ 𝑵𝑶𝑹𝑴𝑨𝑺 𝑫𝑬 𝑼𝑺𝑶 𝑫𝑬𝑳 𝑮𝑹𝑼𝑷𝑶.
+
+⚠️ 𝑴𝒂𝒏𝒕𝒆𝒏𝒆𝒓 𝒆𝒍 𝒓𝒆𝒔𝒑𝒆𝒕𝒐 𝒚 𝒔𝒊𝒏 𝒇𝒂𝒍𝒕𝒂𝒓, 𝒆𝒔 𝒍𝒐 𝒎𝒆𝒋𝒐𝒓 𝒑𝒂𝒓𝒂 𝒖𝒏𝒂 𝒃𝒖𝒆𝒏𝒂 𝒂𝒓𝒎𝒐𝒏í𝒂 𝒆𝒏 𝒆𝒍 𝒈𝒓𝒖𝒑𝒐
+✅ 𝑷𝒆𝒓𝒎𝒊𝒕𝒊𝒅𝒐 𝒔𝒖𝒃𝒊𝒓 𝒇𝒐𝒕𝒐𝒔, 𝒊𝒎𝒂𝒈𝒆𝒏𝒆𝒔, 𝒗𝒊𝒅𝒆𝒐𝒔, 𝒔𝒕𝒊𝒄𝒌𝒆𝒓.
+✅ 𝑬𝒔𝒕á 𝒑𝒆𝒓𝒎𝒊𝒕𝒊𝒅𝒐 𝒑𝒐𝒏𝒆𝒓 𝒄𝒖𝒂𝒍𝒒𝒖𝒊𝒆𝒓 𝒆𝒏𝒍𝒂𝒄𝒆 𝒅𝒆 𝒀𝒐𝒖𝒕𝒖𝒃𝒆, 𝑻𝒘𝒊𝒕𝒕𝒆𝒓, 𝑭𝒂𝒄𝒆𝒃𝒐𝒐𝒌 𝒆𝒕𝒄...
+✅ 𝑬𝒔𝒕𝒂 𝒑𝒆𝒓𝒎𝒊𝒕𝒊𝒅𝒐 𝒄𝒖𝒂𝒍𝒒𝒖𝒊𝒆𝒓 𝒄𝒐𝒏𝒕𝒆𝒏𝒕𝒆𝒏𝒊𝒅𝒐 𝒏𝒐 𝒓𝒆𝒍𝒂𝒄𝒊𝒐𝒏𝒂𝒅𝒐 𝒆𝒏 𝒍𝒂 𝒕𝒆𝒎𝒂𝒕𝒊𝒄𝒂 𝒅𝒆𝒍 𝒈𝒓𝒖𝒑𝒐...
+✅ 𝑺𝒆 𝒑𝒖𝒆𝒅𝒆 𝒄𝒐𝒎𝒆𝒏𝒕𝒂𝒓 𝒍𝒐𝒔 𝒅𝒐𝒃𝒍𝒂𝒋𝒆𝒔 𝒅𝒆 𝒄𝒖𝒂𝒍𝒒𝒖𝒊𝒆𝒓 𝒊𝒅𝒊𝒐𝒎𝒂 𝒚 𝒅𝒊𝒂𝒍𝒆𝒄𝒕𝒐𝒔, 𝒔𝒊𝒏 𝒐𝒇𝒆𝒏𝒅𝒆𝒓...
+⛔𝑸𝒖𝒆𝒅𝒂 𝒕𝒐𝒕𝒂𝒍𝒎𝒆𝒏𝒕𝒆 𝒑𝒓𝒐𝒉𝒊𝒃𝒊𝒅𝒐, 𝒅𝒊𝒔𝒄𝒓𝒊𝒎𝒊𝒏𝒂 𝒅𝒐𝒃𝒍𝒂𝒋𝒆𝒔 𝒅𝒆 𝒄𝒖𝒂𝒍𝒒𝒖𝒊𝒆𝒓 𝒊𝒅𝒊𝒐𝒎𝒂, 𝒅𝒊𝒂𝒍𝒆𝒄𝒕𝒐𝒔...
+⛔ 𝑸𝒖𝒆𝒅𝒂 𝒑𝒓𝒐𝒉𝒊𝒃𝒊𝒅𝒐 𝒆𝒏 𝒆𝒍 𝒈𝒓𝒖𝒑𝒐 𝒄𝒖𝒂𝒍𝒒𝒖𝒊𝒆𝒓 𝒄𝒐𝒏𝒗𝒆𝒓𝒔𝒂𝒄𝒊ó𝒏 𝒐𝒇𝒆𝒏𝒔𝒊𝒗𝒂 𝒆𝒏 𝒆𝒍 𝒈𝒓𝒖𝒑𝒐, 𝒔𝒊 𝒐𝒄𝒖𝒓𝒓𝒆 𝒚 𝒂𝒍𝒈𝒖𝒊𝒆𝒏 𝒔𝒆 𝒔𝒊𝒆𝒏𝒕𝒆 𝒐𝒇𝒆𝒏𝒅𝒊𝒅𝒐 𝒒𝒖𝒆 𝒍𝒐 𝒅𝒊𝒈𝒂 𝒒𝒖𝒆 𝒏𝒐 𝒍𝒆 𝒔𝒆𝒏𝒕𝒐 𝒃𝒊𝒆𝒏, 𝒚 𝒑𝒊𝒅𝒆 𝒅𝒊𝒔𝒄𝒖𝒍𝒑𝒂𝒔..
+⛔ 𝑬𝒔𝒕á 𝒑𝒓𝒐𝒉𝒊𝒃𝒊𝒅𝒐 𝒆𝒍 𝒔𝒑𝒂𝒎, 𝒎𝒂𝒔𝒊𝒗𝒐...
+  `;
+
+  await ctx.reply(mensajerules);
+}); 
+    
+ 
+bot.command('dragonball', async (ctx) => {
+const mensajeDragonball = `
+Lista de canales de dragón ball!!
+
+Dragón Ball en Valenciano ⬆️
+- https://ouo.press/y1XKyp
+
+Dragón Ball 🇪🇸⬆️ sin "censura"
+- https://ouo.press/Tu0Oys
+
+Dragón ball en Catalán ✔️
+- próximamente...
+
+Dragón Ball Gallego ⬆️
+- https://ouo.press/LQ7YRB
+
+Dragón Ball euskera ⬆️
+- https://ouo.press/3ddqdU
+
+Dragón ball 🇪🇸⬆️ anime
+- https://ouo.press/qaTXFZx
+
+Dragón ball ⬆️ Manga español 
+- https://ouo.press/E4nF8T
+
+Dragón Ball 🇲🇽✔️
+- https://ouo.press/4J4PQt
+
+Dragón Ball ⬆️🇯🇵 Sub-Español
+- https://ouo.press/5mOurv
+
+Significado:
+
+⬆️ subiendo anime
+✔️ anime completo
+🇪🇸 audio en español..
+🇲🇽 audio latino
+🇯🇵 Japonés sub español..
+
+Actualizado 15/10/24 09:00 
+  `;
+
+  await ctx.reply(mensajeDragonball);
+
+});  
+    
+    
 bot.command('creador', async (ctx) => {
   const mensajeCreador = `
 Creador del bot: ALFA TG
